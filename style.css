@@ -1,0 +1,206 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #666;
+}
+
+
+/* Income */
+
+.income-box {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.income-input {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.income-input span {
+    font-size: 20px;
+    padding: 12px;
+}
+
+input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    flex: 1;
+}
+
+button {
+    border: none;
+    background: #2563eb;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+
+/* Summary */
+
+.summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.summary div {
+    background: #f4f6f8;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.summary p {
+    color: #666;
+}
+
+.summary h3 {
+    margin-top: 8px;
+    font-size: 25px;
+}
+
+
+/* Add Envelope */
+
+.add-envelope {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+
+.form {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+
+/* Envelope Cards */
+
+.envelopes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.envelope {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.envelope-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.envelope-header h3 {
+    font-size: 20px;
+}
+
+.amount {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.progress {
+    height: 12px;
+    background: #e5e7eb;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 15px 0;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: #2563eb;
+    transition: 0.3s;
+}
+
+.expense-input {
+    display: flex;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.expense-input input {
+    min-width: 0;
+}
+
+.delete-btn {
+    background: #dc2626;
+    margin-top: 12px;
+}
+
+.empty {
+    text-align: center;
+    color: #777;
+    padding: 30px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .summary {
+        grid-template-columns: 1fr;
+    }
+
+    .form {
+        flex-direction: column;
+    }
+
+    .income-input {
+        flex-direction: column;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+}

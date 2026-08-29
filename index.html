@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Budget Envelope Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>💰 Budget Envelope Planner</h1>
+            <p>Plan your money. Track your spending.</p>
+        </header>
+
+        <!-- Income Section -->
+        <section class="income-box">
+            <h2>Monthly Income</h2>
+
+            <div class="income-input">
+                <span>₹</span>
+                <input 
+                    type="number" 
+                    id="incomeInput" 
+                    placeholder="Enter your monthly income"
+                >
+                <button onclick="setIncome()">Set Income</button>
+            </div>
+
+            <div class="summary">
+                <div>
+                    <p>Total Income</p>
+                    <h3 id="totalIncome">₹0</h3>
+                </div>
+
+                <div>
+                    <p>Allocated</p>
+                    <h3 id="allocated">₹0</h3>
+                </div>
+
+                <div>
+                    <p>Remaining</p>
+                    <h3 id="remaining">₹0</h3>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Add Envelope -->
+        <section class="add-envelope">
+
+            <h2>Create Envelope</h2>
+
+            <div class="form">
+
+                <input 
+                    type="text" 
+                    id="categoryInput"
+                    placeholder="Category (e.g. Food)"
+                >
+
+                <input 
+                    type="number" 
+                    id="budgetInput"
+                    placeholder="Budget amount"
+                >
+
+                <button onclick="addEnvelope()">
+                    + Add Envelope
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Envelopes -->
+        <section>
+
+            <h2>Your Envelopes</h2>
+
+            <div id="envelopeContainer" class="envelopes">
+
+                <!-- Envelopes will appear here -->
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
